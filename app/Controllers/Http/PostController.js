@@ -88,7 +88,7 @@ class PostController {
   async destroy({params, response, session}) {
     const post = await Post.find(params.id)
 
-    await post.delete();
+    await post.delete()
 
     session.flash({notification: 'Post Deleted!'})
 
